@@ -11,13 +11,13 @@ func _process(delta: float) -> void:
 	pass
 	
 func _on_laptop_pressed() -> void:
-	get_tree().change_scene_to_file("res://laptopscreen.tscn")
+	get_tree().change_scene_to_file("res://laptop/laptopscreen.tscn")
 	pass 
 
 func _on_medals_pressed() -> void:
-	get_tree().change_scene_to_file("res://ecscreen.tscn")
+	get_tree().change_scene_to_file("res://extracurriculars/ecscreen.tscn")
 	pass
 
 func _on_phone_pressed() -> void:
-	get_tree().change_scene_to_file("res://phonescreen.tscn")
+	get_tree().change_scene_to_file("res://phone/phonescreen.tscn")
 	pass 

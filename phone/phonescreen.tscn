@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bneelyhl58hy3"]
+
+[ext_resource type="Script" path="res://phone/phonescreen.gd" id="1_2kin4"]
+[ext_resource type="Texture2D" uid="uid://03s2p8iki6o6" path="res://images/phonebg_t.png" id="1_g0g6g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rowoq"]
+bg_color = Color(0.862745, 0.552941, 0.686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bp1mg"]
+bg_color = Color(0.591048, 0.137772, 0.341337, 1)
+
+[sub_resource type="Theme" id="Theme_bqkbp"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_rowoq")
+Button/styles/normal = SubResource("StyleBoxFlat_bp1mg")
+
+[node name="phonemain" type="Node"]
+script = ExtResource("1_2kin4")
+
+[node name="background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g0g6g")
+expand_mode = 2
+
+[node name="backbutton" type="Button" parent="."]
+offset_left = 184.0
+offset_top = 18.0
+offset_right = 353.0
+offset_bottom = 63.0
+theme = SubResource("Theme_bqkbp")
+text = "back"
+
+[connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]
