@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bneelyhl58hy3"]
+
+[ext_resource type="Texture2D" uid="uid://03s2p8iki6o6" path="res://images/phonebg_t.png" id="1_g0g6g"]
+
+[node name="phonemain" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g0g6g")
+expand_mode = 2

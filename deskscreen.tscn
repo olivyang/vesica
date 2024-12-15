@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbh2av4rlu6cf"]
+
+[ext_resource type="Script" path="res://deskscreen.gd" id="1_f56vh"]
+[ext_resource type="Texture2D" uid="uid://cr3dlpst86nnw" path="res://images/bg_t.png" id="2_tx0at"]
+[ext_resource type="Texture2D" uid="uid://xbpfs0py6r85" path="res://images/laptop_t.png" id="3_b85gf"]
+[ext_resource type="Texture2D" uid="uid://cd6be6onv6pck" path="res://images/medals_t.png" id="4_c7que"]
+[ext_resource type="Texture2D" uid="uid://dke8vfy1qoea4" path="res://images/phone_t.png" id="5_wb8rm"]
+
+[node name="deskmain" type="Node"]
+script = ExtResource("1_f56vh")
+
+[node name="background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_right = 1.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tx0at")
+expand_mode = 2
+
+[node name="laptop" type="TextureButton" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = 33.0
+offset_right = 1978.0
+offset_bottom = 1005.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.37, 0.37)
+texture_normal = ExtResource("3_b85gf")
+
+[node name="medals" type="TextureButton" parent="."]
+offset_left = -33.0
+offset_top = 3.0
+offset_right = 3066.0
+offset_bottom = 1623.0
+scale = Vector2(0.37, 0.37)
+texture_normal = ExtResource("4_c7que")
+
+[node name="phone" type="TextureButton" parent="."]
+offset_left = 26.0
+offset_top = 48.0
+offset_right = 3125.0
+offset_bottom = 1668.0
+scale = Vector2(0.37, 0.37)
+texture_normal = ExtResource("5_wb8rm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 326)
+
+[connection signal="pressed" from="laptop" to="." method="_on_laptop_pressed"]
+[connection signal="pressed" from="medals" to="." method="_on_medals_pressed"]
+[connection signal="pressed" from="phone" to="." method="_on_phone_pressed"]
